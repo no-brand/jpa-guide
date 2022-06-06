@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+    version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+
+  <persistence-unit name="jpa-standalone">
+    <class><!-- Entity Manager Class Name --></class>
+
+    <!-- https://www.h2database.com/html/cheatSheet.html -->
+    <properties>
+      <property
+          name="javax.persistence.jdbc.url"
+          value="jdbc:h2:tcp://localhost/~/dev/repo/jpa/jpa-guide/jpa-standalone/h2/database" />
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+      <property name="javax.persistence.jdbc.user" value="admin" />
+      <property name="javax.persistence.jdbc.password" value="admin" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+    </properties>
+  </persistence-unit>
+
+</persistence>
